@@ -10,7 +10,7 @@ This project demonstrates the implementation of a CI/CD pipeline using **Jenkins
 
 The application source code is maintained in a GitHub repository. Jenkins automatically retrieves the source code and executes the CI/CD pipeline.
 
-##The pipeline performs the following operations:
+The pipeline performs the following operations:
 
 ```text
 GitHub
@@ -140,22 +140,22 @@ Finished: SUCCESS
 
 🐳 DOCKER IMPLEMENTATION:
 Docker is used to containerize and deploy the Node.js application.
-#Build Docker Image
+Build Docker Image
 docker build -t jenkins-cicd-app .
 
-#Run Docker Container
+Run Docker Container
 docker run -d --name jenkins-cicd-container -p 3000:3000 jenkins-cicd-app
 
-#Check Running Containers
+Check Running Containers
 docker ps
 
-##The running container is:
+The running container is:
 jenkins-cicd-container
 
-##The application port mapping is:
+The application port mapping is:
 3000:3000
 
-###This makes the application available on:
+This makes the application available on:
 http://localhost:3000
 
 🧪 APPLICATION TESTING:
@@ -163,7 +163,7 @@ The application is tested during the Jenkins pipeline.
 #The test command is:
 npm test
 
-#The test performs a JavaScript syntax check:
+The test performs a JavaScript syntax check:
 node --check app.js
 
 A successful test allows the Jenkins pipeline to continue to deployment.
@@ -172,7 +172,7 @@ A successful test allows the Jenkins pipeline to continue to deployment.
 After the Docker container is successfully deployed, the application can be accessed using:
 http://localhost:3000
 
-#The application displays:
+The application displays:
 Hello from Jenkins CI/CD Pipeline!
 
 This confirms that the Node.js application was successfully deployed and is running inside the Docker container.
@@ -233,7 +233,7 @@ Post Actions    ✓
 
 The Jenkins Console Output also confirms:
 
-##CI/CD Pipeline completed successfully!
+CI/CD Pipeline completed successfully!
 
 Finished: SUCCESS
 
